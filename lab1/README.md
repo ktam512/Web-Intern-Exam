@@ -5,10 +5,10 @@
 <p>After that, tailor the CSS file by making each section change color on click</p>
 <h2>Image of the horizontal webpage:</h2>
 <p><em>Notice that the mouse is hovering over the "About" section</em></p>
-![image](https://github.com/user-attachments/assets/da25e651-96da-4aea-bc68-ba89b79b609f)
+![image](https://github.com/ktam512/Web-Intern-Exam/blob/main/images/hori-bar.png?raw=true)
 <h2>Image of the vertical webpage:</h2>
 <p><em>Notice the hamburger button at the top-right corner</em></p>
-![image](https://github.com/user-attachments/assets/429a6cd1-853c-4ae2-8e39-58abf87ab49f)
+![image](https://github.com/ktam512/Web-Intern-Exam/blob/main/images/vertical-bar.png?raw=true)
 
 
 
