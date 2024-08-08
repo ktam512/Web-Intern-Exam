@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <div class="menu">
+                <a href="#main">Main</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="main">
+        <h1>Main Section</h1>
+        <p>Welcome to the main section.</p>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Learn more about us here.</p>
+    </section>
+
+    <section id="services">
+        <h1>Our Services</h1>
+        <p>Details about our services.</p>
+    </section>
+
+    <section id="projects">
+        <h1>Our Projects</h1>
+        <p>See our past and current projects.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us.</p>
+    </section>
+</body>
+</html>
