@@ -1,16 +1,9 @@
 ### Start with ChatGPT
 - I entered this prompt into ChatGPT:
-"Create an interactive image gallery with HTML, CSS, and JavaScript.
-Requirement:
-- Display a grid of shrunk images
-- Clicking on a shrunk image will open a web modal that displays the full-size image
-- The modal will have "previous" and "next" buttons to navigate to other images in the grid
-- Each time the user hovers the mouse over a single shrunk image, blur all other shrunk image
-About the Code:
-- Use a CSS grid for the layout of the shrunk image
-- Use JS to handle the modal
-- Use media query of CSS to handle the blurring
-Note: 
-- "Shrunk" image here means that the image is displayed at a particular size (not their full size)"
-- It returns 3 file that mostly do the work. Three problem: The "previous" button in the modal appeared at the center of the webpage. When hover over an image, only images at its right side got blurred. Finally, the size of the "shrunk" image is not the same. To make it simple, I demand for all of them to be squared-size.
-- After tailoring its CSS for my liking, we're done.
+  <div><img width="615" alt="Screenshot 2024-08-09 at 18 27 13" src="https://github.com/user-attachments/assets/37f09ec3-a4d6-42ee-bccc-66a50b553120"></div>
+- It returns 3 files that mostly do the work. Three problems: The "previous" button in the modal appeared at the center of the webpage. When hovering over an image, only images on its right side got blurred. Finally, the size of the "shrunk" image is not the same. To simplify it, I demand that all of them be squared-size.
+- After tailoring its CSS to my liking, we're done.
+#### Finished product (when hovering over an image):
+<img width="1034" alt="Screenshot 2024-08-09 at 18 29 41" src="https://github.com/user-attachments/assets/a4b78217-a315-42a6-8165-47ee9397cecf">
+#### When clicking an image, modal UI appears:
+<img width="1413" alt="Screenshot 2024-08-09 at 18 30 40" src="https://github.com/user-attachments/assets/854fc197-891b-4e89-b63b-88052ac75b1d">
