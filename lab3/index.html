@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://assets.codepen.io/1506195/unsplash-music-0.avif" alt="guitar player at concert"  class="gallery-item" />
+        <img src="https://assets.codepen.io/1506195/unsplash-music-1.avif" alt="duo singing"  class="gallery-item"/>
+        <img src="https://assets.codepen.io/1506195/unsplash-music-2.avif" alt="crowd cheering"  class="gallery-item"/>
+        <img src="https://assets.codepen.io/1506195/unsplash-music-3.avif" alt="singer performing"  class="gallery-item"/>
+        <img src="https://assets.codepen.io/1506195/unsplash-music-4.avif" alt="singer fistbumping crowd"  class="gallery-item"/>
+        <img src="https://assets.codepen.io/1506195/unsplash-music-6.avif" alt="crowd looking at a lighted stage" class="gallery-item"/>
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+        <div class="caption" id="caption"></div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
