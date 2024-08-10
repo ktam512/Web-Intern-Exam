@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5); /* Gradient background */
+}
+
+.weather-app {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid #74ebd5;
+    outline: none;
+    font-size: 1em;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #ACB6E5;
+    box-shadow: 0 0 10px rgba(172, 182, 229, 0.5);
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #74ebd5;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ACB6E5;
+}
+
+#weather-result {
+    margin-top: 20px;
+}
+
+#city-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+#temperature {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+}
+
+#description {
+    font-size: 1.1em;
+    color: #777;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
