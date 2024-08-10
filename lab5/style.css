@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f06, #ff9c00);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.widget {
+    background: linear-gradient(135deg, #76c7c0, #5a92f8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: grab;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 150px; /* Ensure a minimum height */
+}
+
+.widget:active {
+    cursor: grabbing;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.widget:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#reset {
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#reset:hover {
+    background-color: #e63e4d;
+    transform: scale(1.05);
+}
+
+/* Individual widget colors */
+.widget.weather {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.widget.calendar {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.widget.todo {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+}
+
+.widget.news {
+    background: linear-gradient(135deg, #2c3e50, #fd746c);
+}
