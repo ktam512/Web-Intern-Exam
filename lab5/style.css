@@ -19,7 +19,7 @@ body {
 
 .widget {
     background: linear-gradient(135deg, #76c7c0, #5a92f8);
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -28,6 +28,9 @@ body {
     font-weight: bold;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     min-height: 150px; /* Ensure a minimum height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .widget:active {
@@ -39,6 +42,13 @@ body {
 .widget:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.widget img {
+    max-width: 80%; /* Adjust size as needed */
+    max-height: 80%;
+    object-fit: contain; /* Ensure image fits within the widget */
+    display: block; /* Remove extra space below images */
 }
 
 #reset {
