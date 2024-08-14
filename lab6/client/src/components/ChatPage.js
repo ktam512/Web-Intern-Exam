@@ -17,7 +17,10 @@ const ChatPage = ({socket}) => {
      const userName = localStorage.getItem("userName");
      if (userName) {
        socket.emit("newUser", { userName, socketID: socket.id });
-     }
+     } else {
+      // If no username is found, redirect to the login page
+      window.location.href = "/";
+    }
     // Receive the history of messages when the user connects
     socket.on("historyResponse", history => {
       setMessages(history);
@@ -38,11 +41,28 @@ const ChatPage = ({socket}) => {
     // Scroll to the bottom when messages change
     lastMessageRef.current?.scrollIntoView({ behavior: 'smooth' });
 
+    // Detect when the server disconnects
+    socket.on("disconnect", (reason) => {
+      if (reason === "io server disconnect") {
+        // Clear localStorage if the server disconnects
+        localStorage.clear();
+        alert("Server disconnected. Chat history and active user list have been cleared.");
+      }
+    });
+
+    // Detect when the connection fails
+    socket.on("connect_error", () => {
+      localStorage.clear();
+      alert("Server connection failed. Chat history and active user list have been cleared.");
+    });
+
     // Cleanup listeners on component unmount
     return () => {
       socket.off("historyResponse");
       socket.off("messageResponse");
       socket.off("typingResponse");
+      socket.off("disconnect");
+      socket.off("connect_error");
     };
   }, [socket]);
 
